@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hani.contactsmap">
+    <uses-sdk android:minSdkVersion="14" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-feature android:glEsVersion="0x00020000"
+        android:required="true" />
+
+
+    <application android:label="@string/app_name"
+        android:icon="@drawable/h">
+        <activity
+            android:name=".AndroidTabAndListView"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name">
+
+        </activity>
+
+        <activity
+            android:name=".ActivityJSON"
+            android:label="@string/app_name" />
+
+
+        <activity
+            android:name=".ContactsMapActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".SingleContactActivity"
+            android:label="Contact" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAwUoFjm9UmLMgWBpsJ9ZMQkmJWwMMHLNc" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".SinglePersonActivity"
+            android:label="@string/title_activity_single_person"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+    </application>
+
+</manifest>
